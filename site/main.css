@@ -1,0 +1,74 @@
+h1{
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: #b0e0e6;
+    margin-bottom: 0;
+}
+div{
+    background-color: powderblue;
+    padding: 0 10px 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    grid-gap: 10px;
+    height: 50px;
+}
+
+button{
+    margin: 10px 10px 10px 10px;
+}
+
+input{
+    margin: 10px 10px 10px 10px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#prompt-form {
+  display: inline-block;
+  padding: 5px 5px 5px 70px;
+  width: 200px;
+  border: 1px solid black;
+  background: yellow url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
+  vertical-align: middle;
+}
+
+#prompt-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#prompt-form-container:before {
+  display: inline-block;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+
+#cover-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
+}
+
+#prompt-form input[name="text"] {
+  display: block;
+  margin: 5px;
+  width: 180px;
+}

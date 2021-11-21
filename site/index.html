@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAXI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body style="background-color: powderblue">
+<h1 style="padding-bottom: 10px">User</h1>
+<!-- <button id="myBtn" onclick="DB.createTable('drivers')">Show drivers</button> -->
+<input type="button" value="Show drivers" id="myBtn">
+
+<div id="prompt-form-container">
+  <form id="prompt-form">
+    <div id="prompt-message"></div>
+    <input name="text" type="text">
+    <input type="submit" value="Ok">
+  </form>
+</div>
+    <input id = "input1" type="text" placeholder="UserName">
+    <input id = "input2" type="text" placeholder="Phone">
+    <input id = "input3" type="text" placeholder="From">
+    <input id = "input4" type="text" placeholder="To">
+    <input id = "input5" type="text" placeholder="PU time">
+    <button onclick="order(document.getElementById('input1').value, document.getElementById('input2').value, document.getElementById('input3').value, document.getElementById('input4').value, document.getElementById('input5').value)">Order</button>
+</div>
+<div style="padding-bottom: 30px">
+    <input id = "input6" type="text" placeholder="Phone number">
+    <button style="background-color: greenyellow" onclick="showDetails(document.getElementById('input6').value)">Check order</button>
+</div>
+<div id = "ans"></div>
+</body>
+<script src = "./main.js"></script>
+<script src="service.js"></script>
+</html>
