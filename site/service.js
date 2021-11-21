@@ -33,6 +33,11 @@ function showDetails(phonenumber) {
     res.showInfo(phonenumber)
 }
 
+function showTotalInfo() {
+    const res = new Reservation()
+    res.showTotalInfoRequest()
+}
+
 class Reservation {
 
     insertData = (driverid, username,phone,from,to, time, payment) => {
@@ -85,6 +90,14 @@ class Reservation {
             JSON.stringify(DB.sendRequest('GET', DB.URL.concat(driverName)).then(datas => {
                 alert("OrderNumber: " + data[0].requestid + ", driver: " + datas[0].name + ", From: " + data[0]._from + ", to: " + data[0]._to + ", price " + data[0].payment + ", time " + data[0].time)
             }))
+        }))
+    }
+
+    showTotalInfoRequest = () => {
+        let requ = "select * from requests"
+        JSON.stringify(DB.sendRequest('GET', DB.URL.concat(requ))
+        .then(data => {
+            console.log(data)
         }))
     }
 }
